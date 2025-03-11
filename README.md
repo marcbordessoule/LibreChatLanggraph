@@ -49,6 +49,8 @@
 
 # ✨ Features
 
+- new - Add Langgraph endpoint
+
 - 🖥️ **UI & Experience** inspired by ChatGPT with enhanced design and features
 
 - 🤖 **AI Model Selection**:  
