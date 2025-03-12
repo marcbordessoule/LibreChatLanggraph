@@ -12,6 +12,25 @@
       },
       "console": "integratedTerminal",
       "envFile": "${workspaceFolder}/.env"
-    }
+    },
+    {
+      "name": "Client Launch Librechat Chrome",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:3090",
+      "webRoot": "${workspaceFolder}/client"
+    },    
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Server : Launch LibreChat (debug)",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/api/server/index.js",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    },    
   ]
 }

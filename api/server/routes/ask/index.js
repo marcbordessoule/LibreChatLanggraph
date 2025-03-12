@@ -1,6 +1,7 @@
 const express = require('express');
 const openAI = require('./openAI');
 const custom = require('./custom');
+const langgraph = require('./customLanggraph');
 const google = require('./google');
 const anthropic = require('./anthropic');
 const gptPlugins = require('./gptPlugins');
@@ -43,5 +44,6 @@ router.use(`/${EModelEndpoint.gptPlugins}`, gptPlugins);
 router.use(`/${EModelEndpoint.anthropic}`, anthropic);
 router.use(`/${EModelEndpoint.google}`, google);
 router.use(`/${EModelEndpoint.custom}`, custom);
+router.use(`/${EModelEndpoint.custom}`, langgraph);
 
 module.exports = router;

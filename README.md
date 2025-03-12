@@ -50,6 +50,48 @@
 # ✨ Features
 
 - new - Add Langgraph endpoint
+      add
+        api/app/clients/LanggraphClient.js
+        api/server/controllers/AskControllerGraph.js
+        api/server/routes/ask/customLanggraph.js
+        api/server/services/Endpoints/custom/initializeGraph.js
+
+        modifié :         api/app/clients/index.js
+        modifié :         api/server/routes/ask/index.js
+        modifié :         api/server/services/Endpoints/custom/index.js
+
+        modifié :         packages/data-provider/src/createPayload.ts
+
+      Debug client:
+        modifié :         .vscode/launch.json
+
+      >cd api
+      >npm i @langchain/langgraph-sdk 
+        modifié :         api/package.json
+        modifié :         package-lock.json
+
+      maj les packages:
+      npm ci
+
+      Construire le client:
+      npm run frontend 
+      Lancer le serveur
+      npm run backend
+
+      Debug
+      lancer le server : menu gauche + liste : launch Librechat 
+      dans le terminal :npm run fronfend:dev
+      lancer le debug du client : menu gauche + liste : clinent Librechat
+
+
+      configurer le .env
+        les apikey
+        mongodb url
+      configurer le librechat.yaml
+
+  en cas de pb:
+    si pendant npm run backend : "sh: cross-env: command not found" >> sudo npm install --global cross-env
+    ou npm install cross-env
 
 - 🖥️ **UI & Experience** inspired by ChatGPT with enhanced design and features
 
